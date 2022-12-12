@@ -1,0 +1,47 @@
+import random
+print("WELCOME TO THE GAME OF 'ROCK PAPER SCISSOR'")
+def gameStart(comp,user):
+    if comp==user:
+        print("Match Tied")
+    elif comp=='r':
+        if user=='p':
+            print("Win")
+        elif user=='s':
+            print("Lose")
+        else:
+            print("Wrong input")
+
+    elif comp=='p':
+        if user=='s':
+            print("Win")
+        elif user=='r':
+            print("Lose")
+        else:
+            print("Wrong input")
+
+    elif comp=='s':
+        if user=='r':
+            print("Win")
+        elif user=='p':
+            print("Lose")
+        else:
+            print("Wrong input")
+
+    
+
+
+
+print("select from:r or p or s ::")
+r=random.randint(1,3)
+if r==1:
+    comp='r'
+elif r==2:
+    comp='p' 
+elif r==3:
+    comp='s'
+user=input("Select user choice : r or p or s::")
+
+gameStart(comp, user)
+print("Computer choice :",comp)
+print("User choice :",user)
+
